@@ -2,9 +2,11 @@ require 'json'
 require 'open-uri'
 require 'pp'
 
+
+
 # Construct the URL we'll be calling
 request_uri = 'https://www.courtlistener.com/api/rest/v3/schools/'
-request_query = '?name=HSU'
+request_query = '?name=McMurry%20College'
 url = "#{request_uri}#{request_query}"
 
 # Actually fetch the contents of the remote URL as a String.
@@ -38,6 +40,8 @@ result_hash = JSON.parse(buffer)
 result_array = result_hash["results"]
 
 p result_array.length
+
+pp result_array
 
 pp result_array.map { |result| result["name"]}
 
@@ -73,5 +77,4 @@ pp result_array.map { |result| result["name"]}
 # 13  Mandy Reynolds  example-11@railstutorial.org
 # Registered: 2013-12-11T06:09:08.138Z
 
-puts "Finished!\n\n"
 
