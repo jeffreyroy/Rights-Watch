@@ -4,4 +4,17 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+  hoverListener();
 });
+
+
+var hoverListener = function() {
+	$( ".justice-image" ).hover(
+  function() {
+    $( this ).css( "width", "150px" );
+  }, function() {
+    $( this ).css( "width", "75px" );
+  }
+	);
+}

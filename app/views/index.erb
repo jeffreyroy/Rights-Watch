@@ -1,0 +1,6 @@
+<p class="alert">Border retest</p>
+<div class="justices-container flex-container">
+	<% Justice.all.each do |justice| %>
+		<img class="justice-image" src="/images/<%=justice.image_file%>">
+	<% end %>
+</div>

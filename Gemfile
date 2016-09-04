@@ -3,9 +3,13 @@ source 'https://rubygems.org'
 # PostgreSQL driver
 gem 'pg'
 
+# Parsers
+gem 'json'
+
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-reloader'
 
 gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
