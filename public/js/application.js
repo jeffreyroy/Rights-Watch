@@ -10,11 +10,13 @@ $(document).ready(function() {
 
 
 var hoverListener = function() {
+  var oldWidth;
 	$( ".justice-image" ).hover(
   function() {
+    oldWidth = $( this ).css( "width" );
     $( this ).css( "width", "150px" );
   }, function() {
-    $( this ).css( "width", "75px" );
+    $( this ).css( "width", oldWidth );
   }
 	);
 }
