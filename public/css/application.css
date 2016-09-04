@@ -1,0 +1,60 @@
+body {
+	font-family: serif;
+	color: white;
+}
+
+header {
+	/*background-color: white;*/
+	padding: 20px;
+	font-size: 3em;
+}
+
+.court-background {
+	background: black url("/images/court-background.jpg") no-repeat center center fixed;
+	background-size: 100%, 100%;
+}
+
+.alert {
+	color: green;
+	padding: 10px;
+}
+
+.center-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.flex-centered {
+	margin: auto;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-width: 2px;
+	border-style: solid;
+	border-color: green;
+}
+
+
+
+.justices-container {
+	/*width: 800px;*/
+	height: 200px;
+	padding: 5px;
+
+}
+
+.justice-image {
+	box-shadow: 2px 2px 5px black;
+	height: auto;
+	width: 100px;
+	margin: 2px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	/*display: inline-block;*/
+	/*vertical-align: middle;*/
+}
