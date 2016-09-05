@@ -33,9 +33,9 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-width: 2px;
+/*	border-width: 2px;
 	border-style: solid;
-	border-color: green;
+	border-color: black;*/
 }
 
 
@@ -57,4 +57,9 @@ header {
 	border-color: black;
 	/*display: inline-block;*/
 	/*vertical-align: middle;*/
+}
+
+.justice-name {
+	text-align: center;
+	display: none;
 }
