@@ -58,3 +58,8 @@ header {
 	/*display: inline-block;*/
 	/*vertical-align: middle;*/
 }
+
+.justice-name {
+	text-align: center;
+	display: none;
+}

@@ -15,8 +15,11 @@ var hoverListener = function() {
   function() {
     oldWidth = $( this ).css( "width" );
     $( this ).css( "width", "150px" );
+    $( this ).parent().find(".justice-name").show()
+
   }, function() {
     $( this ).css( "width", oldWidth );
+    $( this ).parent().find(".justice-name").hide()
   }
 	);
 }

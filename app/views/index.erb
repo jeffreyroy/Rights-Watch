@@ -4,7 +4,10 @@
 </div>
 <div class="justices-container flex-centered">
 	<% Justice.all.each do |justice| %>
-		<img class="justice-image" src="/images/<%=justice.image_file%>">
+		<div>
+			<img class="justice-image" src="/images/<%=justice.image_file%>">
+			<div class="justice-name"><%=justice.first_name + ' ' + justice.last_name%></div>
+		</div>
 	<% end %>
 </div>
 <div class="flex-centered" id="justice-name">
