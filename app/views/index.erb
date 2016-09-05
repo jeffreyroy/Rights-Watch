@@ -1,14 +1,22 @@
 
 <div class="flex-centered">
-	<h1>Meet the justices</h1>
+	<h1>Placeholder</h1>
 </div>
 <div class="justices-container flex-centered">
-	<% Justice.all.each do |justice| %>
 		<div>
-			<img class="justice-image" src="/images/<%=justice.image_file%>">
-			<div class="justice-name"><%=justice.first_name + ' ' + justice.last_name%></div>
+			<img class="justice-image" src="/images/Blank.jpg">
+			<div class="justice-name">Issues</div>
 		</div>
-	<% end %>
+		<div>
+			<img class="justice-image" src="/images/law-book.jpg">
+			<div class="justice-name">Cases</div>
+		</div>
+		<div>
+			<a href="/justices">
+				<img class="justice-image" src="/images/JRoberts.jpg">
+				<div class="justice-name">Justices</div>
+			</a>
+		</div>
 </div>
 <div class="flex-centered" id="justice-name">
 </div>

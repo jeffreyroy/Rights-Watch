@@ -33,9 +33,9 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-width: 2px;
+/*	border-width: 2px;
 	border-style: solid;
-	border-color: green;
+	border-color: black;*/
 }
 
 
