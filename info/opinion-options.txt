@@ -1,0 +1,64 @@
+{"name"=>"Opinion List",
+ "description"=>"",
+ "renders"=>["application/json", "text/html", "application/xml"],
+ "parses"=>
+  ["application/json",
+   "application/x-www-form-urlencoded",
+   "multipart/form-data",
+   "application/xml"],
+ "filters"=>
+  {"sha1"=>{"type"=>"CharFilter", "lookup_types"=>["exact"]},
+   "date_modified"=>
+    {"type"=>"IsoDateTimeFilter",
+     "lookup_types"=>
+      ["exact",
+       "gte",
+       "gt",
+       "lte",
+       "lt",
+       "range",
+       "year",
+       "month",
+       "day",
+       "hour",
+       "minute",
+       "second"]},
+   "extracted_by_ocr"=>{"type"=>"BooleanFilter", "lookup_types"=>["exact"]},
+   "date_created"=>
+    {"type"=>"IsoDateTimeFilter",
+     "lookup_types"=>
+      ["exact",
+       "gte",
+       "gt",
+       "lte",
+       "lt",
+       "range",
+       "year",
+       "month",
+       "day",
+       "hour",
+       "minute",
+       "second"]},
+   "id"=>
+    {"type"=>"NumberFilter",
+     "lookup_types"=>["exact", "gte", "gt", "lte", "lt", "range"]},
+   "per_curiam"=>{"type"=>"BooleanFilter", "lookup_types"=>["exact"]},
+   "cluster"=>
+    {"type"=>"RelatedFilter",
+     "lookup_types"=>"See available filters for 'Opinion Clusters'"},
+   "author"=>
+    {"type"=>"RelatedFilter",
+     "lookup_types"=>"See available filters for 'People'"},
+   "joined_by"=>
+    {"type"=>"RelatedFilter",
+     "lookup_types"=>"See available filters for 'People'"},
+   "type"=>
+    {"type"=>"MultipleChoiceFilter",
+     "lookup_types"=>["exact"],
+     "choices"=>
+      [{"display_name"=>"Combined Opinion", "value"=>"010combined"},
+       {"display_name"=>"Lead Opinion", "value"=>"020lead"},
+       {"display_name"=>"Concurrence", "value"=>"030concurrence"},
+       {"display_name"=>"Dissent", "value"=>"040dissent"},
+       {"display_name"=>"Addendum", "value"=>"050addendum"}]}},
+ "ordering"=>["id", "date_created", "date_modified"]}

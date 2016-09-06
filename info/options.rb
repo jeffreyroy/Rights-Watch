@@ -6,7 +6,7 @@ require 'httparty'
 # class Opinion
 
 # Construct the URL we'll be calling
-request_uri = 'https://www.courtlistener.com/api/rest/v3/clusters/'
+request_uri = 'https://www.courtlistener.com/api/rest/v3/opinions/'
 request_query = "?federal_cite_one=410%20U.S.%20113"
 url = "#{request_uri}#{request_query}"
 
@@ -17,15 +17,15 @@ response = HTTParty.options(request_uri)
 
 pp response
 
-result_hash = JSON.parse(buffer)
+# result_hash = JSON.parse(buffer)
 
-result_array = result_hash["results"]
+# result_array = result_hash["results"]
 
-p result_array.length
+# p result_array.length
 
 # pp result_array
 
-pp result_array.map { |result| result["case_name"]}
+# pp result_array.map { |result| result["case_name"]}
 
 # end
 

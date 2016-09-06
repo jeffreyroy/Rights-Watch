@@ -1,0 +1,77 @@
+cluster:
+
+{
+    "resource_uri": "https://www.courtlistener.com/api/rest/v3/clusters/2812209/",
+    "absolute_url": "/opinion/2812209/obergefell-v-hodges/",
+    "panel": [],
+    "non_participating_judges": [],
+    "docket": "https://www.courtlistener.com/api/rest/v3/dockets/2668808/",
+    "sub_opinions": [
+        "https://www.courtlistener.com/api/rest/v3/opinions/2812209/"
+    ],
+    "judges": "",
+    "date_created": "2016-01-22T16:38:29.841908Z",
+    "date_modified": "2016-08-19T20:58:18.451141Z",
+    "date_filed": "2015-06-26",
+    "slug": "obergefell-v-hodges",
+    "citation_id": 2784986,
+    "case_name_short": "Obergefell",
+    "case_name": "Obergefell v. Hodges",
+    "case_name_full": "",
+    "federal_cite_one": "135 S. Ct. 2584",
+    "federal_cite_two": "192 L. Ed. 2d 609",
+    "federal_cite_three": "",
+    "state_cite_one": "",
+    "state_cite_two": "",
+    "state_cite_three": "",
+    "state_cite_regional": "",
+    "specialty_cite_one": "",
+    "scotus_early_cite": "",
+    "lexis_cite": "2015 U.S. LEXIS 4250",
+    "westlaw_cite": "",
+    "neutral_cite": "",
+    "scdb_id": "2014-070",
+    "scdb_decision_direction": 2,
+    "scdb_votes_majority": 5,
+    "scdb_votes_minority": 4,
+    "source": "C",
+    "procedural_history": "",
+    "attorneys": "",
+    "nature_of_suit": "",
+    "posture": "",
+    "syllabus": "",
+    "citation_count": 5,
+    "precedential_status": "Published",
+    "date_blocked": null,
+    "blocked": false
+}
+
+opinions:
+
+{
+    "resource_uri": "https://www.courtlistener.com/api/rest/v3/opinions/2812209/",
+    "absolute_url": "/opinion/2812209/obergefell-v-hodges/",
+    "cluster": "https://www.courtlistener.com/api/rest/v3/clusters/2812209/",
+    "author": null,
+    "joined_by": [],
+    "per_curiam": false,
+    "date_created": "2015-06-26T15:01:55.193840Z",
+    "date_modified": "2016-08-31T06:07:13.834309Z",
+    "type": "010combined",
+    "sha1": "0304bb66d174e0fd2cddceb66f790f70dad355ff",
+    "page_count": 103,
+    "download_url": "http://www.supremecourt.gov/opinions/14pdf/14-556_3204.pdf",
+    "local_path": "https://www.courtlistener.com/api/rest/v3/opinions/2812209/pdf/2015/06/26/obergefell_v._hodges.pdf",
+    "plain_text": "*Snipped*",
+    "html": "",
+    "html_lawbox": "",
+    "html_columbia": null,
+    "html_with_citations": "*Snipped*",
+"extracted_by_ocr": false,
+    "opinions_cited": [
+        "https://www.courtlistener.com/api/rest/v3/opinions/87116/",
+        "https://www.courtlistener.com/api/rest/v3/opinions/89446/",
+        "*Snipped*",
+        "https://www.courtlistener.com/api/rest/v3/opinions/3731942/"
+    ]
+}

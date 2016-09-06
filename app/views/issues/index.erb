@@ -1,0 +1,10 @@
+<div class="flex-centered">
+  <h1>Issues</h1>
+</div>
+<div class="white-background flex-centered">
+  <ul>
+    <% Issue.all.each do |cur_issue| %>
+      <li><%=cur_issue.name%></li>
+    <% end %>
+  </ul>
+</div>

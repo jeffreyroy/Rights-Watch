@@ -1,0 +1,24 @@
+<h1>New case</h1>
+<form action='/cases' method='post' class="white-background">
+  <label>Issue:</label>
+  <select name="issue">
+    <% @issues.each do |issue| %>
+      <option value="<%=issue.name%>"><%=issue.name%></option>
+    <% end %>
+  </select>
+  <div>
+    <label>Case Name:</label>
+    <input type="text" name="plaintiff" placeholder="Plaintiff">
+    <label>v.</label>
+    <input type="text" name="defendant" placeholder="Defendant">
+  </div>
+  <div>
+    <label>Citation:</label>
+    <input type="text" name="citation">
+  </div>
+  <div>
+    <label>Date Decided:</label>
+    <input type="date" name="date">
+  </div>
+  <button type="submit">Submit</button>
+</form>

@@ -1,17 +1,17 @@
 body {
-	font-family: serif;
-	color: white;
+
 }
 
 header {
 	/*background-color: white;*/
 	padding: 20px;
-	font-size: 3em;
 }
 
 .court-background {
 	background: black url("/images/court-background.jpg") no-repeat center center fixed;
 	background-size: 100%, 100%;
+	font-family: serif;
+	color: white;
 }
 
 .alert {
@@ -38,7 +38,14 @@ header {
 	border-color: black;*/
 }
 
-
+.white-background {
+	margin: auto;
+	width: 50%;
+	height: 100%;
+	background-color: white;
+	color: black;
+	padding: 1em;
+}
 
 .justices-container {
 	/*width: 800px;*/
@@ -62,4 +69,9 @@ header {
 .justice-name {
 	text-align: center;
 	display: none;
+}
+
+.login-form {
+	display: inline-block;
+	float: right;
 }

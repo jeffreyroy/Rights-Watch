@@ -1,0 +1,15 @@
+<div class="flex-centered">
+  <h1>Cases</h1>
+</div>
+<div class="white-background flex-centered">
+  <ul>
+    <% Case.all.each do |cur_case| %>
+      <li><%=cur_case.full_citation%></li>
+    <% end %>
+  </ul>
+
+</div>
+<div class="white-background flex-centered">
+  <a href="/cases/new">Add a new case</a>
+</div>
+
