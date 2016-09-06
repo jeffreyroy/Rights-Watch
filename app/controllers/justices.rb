@@ -1,3 +1,3 @@
-# get "/justices" do
-# 	erb :justices
-# end
+get "/justices" do
+	erb :justices
+end

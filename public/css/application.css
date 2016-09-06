@@ -1,6 +1,5 @@
 body {
-	font-family: serif;
-	color: white;
+
 }
 
 header {
@@ -12,6 +11,8 @@ header {
 .court-background {
 	background: black url("/images/court-background.jpg") no-repeat center center fixed;
 	background-size: 100%, 100%;
+	font-family: serif;
+	color: white;
 }
 
 .alert {
@@ -38,7 +39,10 @@ header {
 	border-color: black;*/
 }
 
-
+.white-background {
+	background-color: white;
+	color: black;
+}
 
 .justices-container {
 	/*width: 800px;*/

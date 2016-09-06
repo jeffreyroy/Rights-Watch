@@ -34,7 +34,7 @@ marriage = Issue.create(name: "Same sex marriage")
 justice_kennedy = Justice.find_by(last_name: "Kennedy")
 justice_roberts = Justice.find_by(last_name: "Roberts")
 
-obergefell = Case.create(name: "Obergefell v. Hodges", issue_id: marriage.id, date_decided: "2015-01-01")
+obergefell = Case.create(name: "Obergefell v. Hodges", issue_id: marriage.id, date_decided: "2015-01-01", cite1: "135 S.Ct. 2071")
 
 o_kennedy = Opinion.create(case_id: obergefell.id, justice_id: justice_kennedy.id)
 o_roberts = Opinion.create(case_id: obergefell.id, justice_id: justice_kennedy.id, opinion_type: "dissent")

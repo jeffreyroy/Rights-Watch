@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# ENV
+gem 'dotenv'
+
 # PostgreSQL driver
 gem 'pg'
 
