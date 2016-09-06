@@ -6,6 +6,7 @@ $(document).ready(function() {
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 
   hoverListener();
+  issueClickListener();
 });
 
 
@@ -23,3 +24,39 @@ var hoverListener = function() {
   }
 	);
 }
+
+var issueClickListener = function() {
+  $( "#new-issue-link").on("click", function(event) {
+    event.preventDefault();
+    targetURL=$(this).attr("href");
+    $.ajax({
+      method: "get",
+      url: targetURL
+    })
+    .done(function(response){
+      $("#issue-form-holder").append(response);
+      $("#new-issue-link").hide();
+    })
+    .fail(function(response){
+      alert("Can't load new issue form");
+    })
+    })
+  }
+
+  var issueSubmitListener = function() {
+  $( "issue-form-holder").on("submit", "#issue-form", function(event) {
+    event.preventDefault();
+    targetURL=$(this).attr("action");
+    $.ajax({
+      method: "get",
+      url: targetURL
+    })
+    .done(function(response){
+      $("#issue-form-").hide();
+      $("#new-issue-link").show();
+    })
+    .fail(function(response){
+      alert("Can't submit new issue form");
+    })
+    })
+  }

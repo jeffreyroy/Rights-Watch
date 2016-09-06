@@ -1,4 +1,15 @@
 <h1>New case</h1>
+
+<% if @case && @case.errors.any? %>
+  <section class="errors">
+    <ul>
+      <% @case.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+
 <form action='/cases' method='post' class="white-background">
   <label>Issue:</label>
   <select name="issue">
@@ -14,7 +25,12 @@
   </div>
   <div>
     <label>Citation:</label>
-    <input type="text" name="citation">
+    <input type="number" name="volume" placeholder="Vol." class="num-input">
+    <select name="reporter">
+      <option value=" U.S. ">U.S.</option>
+      <option value=" S. Ct. ">S.Ct.</option>
+    </select>
+    <input type="number" name="page" placeholder="Pg." class="num-input">
   </div>
   <div>
     <label>Date Decided:</label>

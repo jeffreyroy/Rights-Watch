@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # ENV
 gem 'dotenv'
+gem 'bcrypt'
 
 # PostgreSQL driver
 gem 'pg'

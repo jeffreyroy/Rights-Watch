@@ -41,7 +41,6 @@ header {
 .white-background {
 	margin: auto;
 	width: 50%;
-	height: 100%;
 	background-color: white;
 	color: black;
 	padding: 1em;
@@ -74,4 +73,17 @@ header {
 .login-form {
 	display: inline-block;
 	float: right;
+}
+
+input {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.num-input {
+	width: 3em;
+}
+
+.errors {
+	color: red;
 }

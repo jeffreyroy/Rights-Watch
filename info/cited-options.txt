@@ -1,0 +1,16 @@
+{"name"=>"Opinions Cited List",
+ "description"=>"",
+ "renders"=>["application/json", "text/html", "application/xml"],
+ "parses"=>
+  ["application/json",
+   "application/x-www-form-urlencoded",
+   "multipart/form-data",
+   "application/xml"],
+ "filters"=>
+  {"id"=>{"type"=>"NumberFilter", "lookup_types"=>["exact"]},
+   "citing_opinion"=>
+    {"type"=>"RelatedFilter",
+     "lookup_types"=>"See available filters for 'Opinions'"},
+   "cited_opinion"=>
+    {"type"=>"RelatedFilter",
+     "lookup_types"=>"See available filters for 'Opinions'"}}}

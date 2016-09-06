@@ -1,15 +1,15 @@
 <div class="white-background" >
-
-Supreme Court
-
-
-
-  <form class="login-form" action>
-    <button type="submit">Login</button>
-  </form>
-  <form class="login-form">
-    <button type="submit">Register</button>
-  </form>
-
+  <a href="/">Index</a>
+  <div class="login-form">
+  <% if session[:id] %>
+    Welcome <%= current_user.user_name %> |
+    <form class="login-form" id="logout-form" action="/sessions" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <button type="submit">Logout</button>
+    </form>
+  <% else %>
+    <a href="/users/new">Register</a> | <a href="/sessions/new">Login</a>
+  <% end %>
+  <div>
 
 </div>
