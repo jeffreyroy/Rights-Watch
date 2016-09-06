@@ -1,3 +1,3 @@
 get "/issues" do
-  erb :issues
+  erb :'issues/index'
 end

@@ -1,3 +1,3 @@
 get "/justices" do
-	erb :justices
+	erb :'justices/index'
 end
