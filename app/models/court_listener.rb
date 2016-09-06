@@ -2,13 +2,18 @@
 # CourtListener class communicates with the courtlistener api
 class CourtListener
   CL_URL = 'https://www.courtlistener.com/api/rest/v3/'
-  AUTH_TOKEN = ENV['SECRET_TOKEN']
+  USERNAME = ENV['SECRET_NAME']
+  PASSWORD = ENV['SECRET_TOKEN']
+
+
 
   # Perform a GET request on an endpoint using a hash for query
   def get(endpoint, query_hash)
     request_url = CL_URL + endpoint + "/?" + query_hash.to_query
+    p [USERNAME, PASSWORD]
     p request_url
-    HTTParty.get(request_url)
+    auth = {username: USERNAME, password: PASSWORD}
+    HTTParty.get(request_url, basic_auth: auth)
   end
 
   # Perform search for case and return first found, parsed into a hash
