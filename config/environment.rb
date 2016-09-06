@@ -21,7 +21,7 @@ require "sinatra/reloader" if development?
 # require "sinatra/reloader"
 
 require 'erb'
-
+require 'bcrypt'
 
 # Parsers
 require 'csv'

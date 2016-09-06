@@ -9,14 +9,22 @@ get "/cases/new" do
 end
 
 post "/cases" do
-  issue_id = Issue.find_by(name: params[:issue])
-  name = params[:plaintiff] + ' v. ' + params[:defendant]
-  citation = params[:citation]
+  issue = Issue.find_by(name: params[:issue])
+  # Get parameters
+  p = params[:plaintiff]
+  d = params[:defendant]
+  vol = params[:volume]
+  pg = params[:page]
+  # Construct case info from parameters, if they exist
+  name = (p != "" && d != "") ? p + ' v. ' + d : nil
+  citation = (vol != 0 && pg != 0) ? vol.to_s + params[:reporter] + pg.to_s : nil
+
   date = params[:date]
-  @case = Case.new(issue_id: issue_id, name: name, cite1: citation, date_decided: date)
+  @case = Case.new(issue_id: issue.id, name: name, cite1: citation, date_decided: date)
   if @case.save
     redirect "/cases"
   else
+    @issues=Issue.all
     erb :"/cases/new"
   end
 end

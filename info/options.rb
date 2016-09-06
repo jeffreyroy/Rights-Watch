@@ -6,7 +6,7 @@ require 'httparty'
 # class Opinion
 
 # Construct the URL we'll be calling
-request_uri = 'https://www.courtlistener.com/api/rest/v3/opinions/'
+request_uri = 'https://www.courtlistener.com/api/rest/v3/opinions-cited/'
 request_query = "?federal_cite_one=410%20U.S.%20113"
 url = "#{request_uri}#{request_query}"
 

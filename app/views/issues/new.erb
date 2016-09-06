@@ -1,0 +1,16 @@
+<h1>New issue</h1>
+
+<% if @issue && @issue.errors.any? %>
+  <section class="errors">
+    <ul>
+      <% @issue.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </section>
+<% end %>
+
+<%= erb :'issues/_form', layout: false %>
+
+
+
