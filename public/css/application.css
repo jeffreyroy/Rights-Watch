@@ -87,3 +87,16 @@ input {
 .errors {
 	color: red;
 }
+
+.unmarked-list {
+	list-style-type: none;
+}
+
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
