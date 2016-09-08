@@ -1,8 +1,8 @@
 # ENV setup
 require 'dotenv'
 Dotenv.load
-# AUTH_TOKEN = ENV['SECRET_TOKEN']
 
+require_relative 'app/models/cl_opinion'
 
 # Require config/environment.rb
 require ::File.expand_path('../config/environment',  __FILE__)

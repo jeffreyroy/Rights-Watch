@@ -9,7 +9,9 @@ class CourtListener
     # Print all requests for testing purposes
     p "*"*100
     p request_url
-    HTTParty.get(request_url, headers: {"Authorization:" => "Token #{TOKEN}"})
+    p self.class::TOKEN
+    HTTParty.get(request_url, headers: {"Authorization" => "Token #{self.class::TOKEN}"})
+    # HTTParty.get(request_url)
   end
 
   # Perform query on endpoint

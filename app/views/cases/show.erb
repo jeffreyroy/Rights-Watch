@@ -6,6 +6,7 @@
 </div>
 <div class="inline-box">
   <h2>Recent citations</h2>
-  <% @case.recent_citations %>
+  <% c = @case.recent_citations %>
+  <%= c.full_citation %>
 
 </div>

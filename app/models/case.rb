@@ -1,4 +1,4 @@
-require_relative 'cl_opinion'
+
 
 class Case < ActiveRecord::Base
   # Remember to create a migration!
@@ -24,7 +24,6 @@ class Case < ActiveRecord::Base
       # courtlistener.case_by_opinion(citation["citing_opinion"])
     end
     data_hash = courtlistener.case_data_by_opinion(citations[0]["citing_opinion"])
-    # CLOpinion.new(data_hash)
-
+    CLOpinion.new(data_hash)
   end
 end
