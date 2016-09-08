@@ -2,9 +2,11 @@
   <h1>Issues</h1>
 </div>
 <div class="white-background flex-centered">
-  <ul>
+  <ul class="unmarked-list">
     <% Issue.all.each do |cur_issue| %>
-      <li><%=cur_issue.name%></li>
+      <li>
+        <%= erb :'/issues/_follow', layout: false, locals: { user: current_user, issue: cur_issue } %>
+      </li>
     <% end %>
   </ul>
 </div>
