@@ -1,7 +1,9 @@
+# List of all issues
 get "/issues" do
   erb :'issues/index'
 end
 
+#Add new issue
 get "/issues/new" do
 
   if request.xhr?
@@ -21,6 +23,7 @@ post "/issues" do
   end
 end
 
+# Follow issue
 post "/issues/:id/follow" do
   # Get parameters
   @issue = Issue.find(params[:id])
@@ -34,9 +37,9 @@ post "/issues/:id/follow" do
       redirect "/issues"
     end
   end
-
 end
 
+# Unfollow issue
 post "/issues/:id/unfollow" do
   # Get parameters
   @issue = Issue.find(params[:id])
@@ -50,5 +53,10 @@ post "/issues/:id/unfollow" do
       redirect "/issues"
     end
   end
+end
 
+# Display issue
+get "/issues/:id" do
+  @issue = Issue.find(params[:id])
+  erb :'issues/show'
 end

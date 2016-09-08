@@ -1,0 +1,11 @@
+<div class="flex-centered">
+    <h1><%= @case.name %></h1>
+</div>
+<div class="flex-centered">
+    <p><%= @case.full_citation %></p>
+</div>
+<div class="inline-box">
+  <h2>Recent citations</h2>
+  <% @case.recent_citations %>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="flex-centered">
+  <h1><%= @issue.name %></h1>
+</div>
+<div class="inline-box">
+  <h2>Supreme Court cases</h2>
+  <ul>
+    <% @issue.cases.each do |cur_case| %>
+      <a href="/cases/<%=cur_case.id%>"><%=cur_case.full_citation%></a>
+    <% end %>
+  </ul>
+</div>
+<div class="inline-box">
+  <h2>Recent citations</h2>
+</div>

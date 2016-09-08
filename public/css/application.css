@@ -27,6 +27,10 @@ header {
 
 }
 
+.centered {
+
+}
+
 .flex-centered {
 	margin: auto;
 	width: auto;
@@ -96,7 +100,12 @@ input {
 	display: inline;
 }
 
-.inline-block {
+.inline-box {
 	display: inline-block;
+	vertical-align: top;
+	border: 1px, solid, black;
+	padding: 10px;
+	width: 40%;
+	margin: 10px;
 }
 

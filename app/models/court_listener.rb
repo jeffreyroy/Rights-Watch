@@ -26,6 +26,7 @@ class CourtListener
   # Perform search for case and return first found, parsed into a hash
   def case_by_cite(cite)
     full_result = query("clusters", { "federal_cite_one"=>cite }.to_query)
+    p full_result
     full_result["results"][0]
   end
 
@@ -53,6 +54,32 @@ class CourtListener
     opinion_id = id_from_url(cur_opinion)
     full_result = query("opinions-cited", "fields=citing_opinion&cited_opinion__id=#{opinion_id}")
     full_result["results"]
+  end
+
+  def case_by_opinion(opinion_url)
+    opinion_hash = get(opinion_url)
+    cluster_url = opinion_hash["cluster"]
+  end
+
+  def case_data_by_opinion(opinion_url)
+    opinion_hash = get(opinion_url)
+    full_text = opinion_hash["plain_text"]
+    cluster_url = opinion_hash["cluster"]
+    cluster_hash = get(cluster_url)
+    name = cluster_hash["case_name"]
+    cite = cluster_hash["federal_cite_one"]
+    date_decided = cluster_hash["date_filed"]
+    data_hash = {
+      name: name,
+      cite: cite,
+      date_decided: date_decided,
+      full_text: full_text
+    }
+  end
+
+  def full_text_by_opinion(opinion_url)
+    opinion_hash = get(opinion_url)
+    opinion_hash["plain_text"]
   end
 
 end

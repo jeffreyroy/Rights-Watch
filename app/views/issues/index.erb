@@ -6,12 +6,15 @@
     <% Issue.all.each do |cur_issue| %>
       <li>
         <%= erb :'/issues/_follow', layout: false, locals: { user: current_user, issue: cur_issue } %>
+        <a href="/issues/<%= cur_issue.id %>"><%=cur_issue.name%></a>
       </li>
     <% end %>
   </ul>
 </div>
 <div class="white-background flex-centered">
-  <a id="new-issue-link" href="/issues/new">Add a new issue</a>
+  <% if current_user %>
+    <a id="new-issue-link" href="/issues/new">Add a new issue</a>
+  <% end %>
 </div>
 <div id="issue-form-holder">
 
