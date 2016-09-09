@@ -1,8 +1,11 @@
 <div class="white-background" >
-  <a href="/">Index</a>
+  <div class="flex-centered inline-block">
+    <a href="/"><h1>RightsWatch</h1></a>
+  </div>
   <div class="login-form">
   <% if session[:id] %>
-    Welcome <%= current_user.user_name %> |
+    Index</a> |
+    <%= current_user.user_name %> |
     <form class="login-form" id="logout-form" action="/sessions" method="post">
       <input type="hidden" name="_method" value="DELETE">
       <button type="submit">Logout</button>

@@ -13,9 +13,12 @@
 <form action='/cases' method='post' class="white-background">
   <label>Issue:</label>
   <select name="issue">
+    <optgroup>
+
     <% @issues.each do |issue| %>
       <option value="<%=issue.name%>"><%=issue.name%></option>
     <% end %>
+    </optgroup>
   </select>
   <div>
     <label>Case Name:</label>
@@ -27,8 +30,10 @@
     <label>Citation:</label>
     <input type="number" name="volume" placeholder="Vol." class="num-input">
     <select name="reporter">
-      <option value=" U.S. ">U.S.</option>
-      <option value=" S. Ct. ">S.Ct.</option>
+      <optgroup>
+        <option value=" U.S. ">U.S.</option>
+        <option value=" S. Ct. ">S.Ct.</option>
+      </optgroup>
     </select>
     <input type="number" name="page" placeholder="Pg." class="num-input">
   </div>

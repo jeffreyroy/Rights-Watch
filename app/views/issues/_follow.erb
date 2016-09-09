@@ -1,12 +1,6 @@
-<% if user %>
-  <% if user.following?(issue) %>
-    <form class="inline" action="/issues/<%=issue.id%>/unfollow" method="post"><button type="submit">unfollow</button></form>
-  <% else %>
-    <form class="inline" action="/issues/<%=issue.id%>/follow" method="post"><button type="submit">follow</button></form>
-  <% end %>
-<% else %>
-  >
-<% end %>
 
-<p class="inline"><%=issue.name%></p>
+    <form class="flex" action="/issues/<%=issue.id%>" method="get"><button class="big-button light-blue" type="submit"><%=issue.name%></button></form>
+
+
+
 

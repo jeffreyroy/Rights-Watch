@@ -4,7 +4,7 @@
 <div class="white-background flex-centered">
   <ul>
     <% Case.all.each do |cur_case| %>
-      <li><%=cur_case.full_citation%></li>
+      <li><a href="/cases/<%=cur_case.id%>"><%=cur_case.full_citation%></a></li>
     <% end %>
   </ul>
 

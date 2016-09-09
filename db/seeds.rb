@@ -24,8 +24,11 @@ end
 csv = CSV.read(CASES_FILENAME)
 i = 1
 while i < csv.length
+
   issue=Issue.find_by(name: csv[i][4])
-  Case.create(name: csv[i][0], date_decided: csv[i][1], cite1: csv[i][2])
+
+  Case.create(name: csv[i][0], date_decided: csv[i][1], cite1: csv[i][2], issue_id: issue.id)
+  p "*"*50
   i += 1
 end
 

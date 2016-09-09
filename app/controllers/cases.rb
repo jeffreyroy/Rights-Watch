@@ -28,3 +28,11 @@ post "/cases" do
     erb :"/cases/new"
   end
 end
+
+
+
+# Display case
+get "/cases/:id" do
+  @case = Case.find(params[:id])
+  erb :'cases/show'
+end
