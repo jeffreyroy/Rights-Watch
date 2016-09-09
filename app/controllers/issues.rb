@@ -60,3 +60,10 @@ get "/issues/:id" do
   @issue = Issue.find(params[:id])
   erb :'issues/show'
 end
+
+# Display issue with recent cases
+post "/issues/:issue_id/cases/:case_id" do
+  @issue = Issue.find(params[:issue_id])
+  @case = Case.find(params[:case_id])
+  erb :'issues/show'
+end

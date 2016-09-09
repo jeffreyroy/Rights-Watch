@@ -1,25 +1,41 @@
 <div class="flex-centered">
   <h1><%= @issue.name %></h1>
 </div>
-<div class="inline-box">
+<div class="inline-box flex-centered">
   <h2>Supreme Court cases</h2>
+
+  <ul class="unmarked-list">
+
+    <% @issue.cases.each do |cur_case| %>
+      <li>
+
+        <form class="inline" action="/cases/<%=cur_case.id%>" method="get">
+          <button class="big-button light-blue" type="submit"><%=cur_case.name%>
+          </button>
+        </form>
+        <form class="inline" action="/issues/<%=@issue.id%>/cases/<%=cur_case.id%>" method="post">
+          <button class="tall-button light-blue" type="submit">&rarr;
+          </button>
+        </form>
+      </li>
+    <% end %>
+    <% if current_user %>
+      <li>
+        <form action="/cases/new" method="get">
+          <button class="big-button yellow" type="submit">+ Add New Case
+          </button>
+        </form>
+      </li>
+    <% end %>
+  <ul>
 </div>
 <div class="inline-box">
   <h2>Recent citations</h2>
-</div>
-
-  <% @issue.cases.each do |cur_case| %>
-    <div>
-      <div class="inline-box">
-        <a href="/cases/<%=cur_case.id%>"><%=cur_case.full_citation%></a>
-      </div>
-      <ul class="inline-box">
-         <% cur_case.recent_citations.each do |citation| %>
-          <li><a href="/issues/<%=@issue.id%>/citations/<%=citation.id%>"><%=citation.full_citation%></a></li>
-          <% end %>
-      </ul>
-    </div>
+  <% if @case %>
+    <ul>
+       <% @case.recent_citations.each do |citation| %>
+        <li><a href="/issues/<%=@issue.id%>/citations/<%=citation.id%>"><%=citation.full_citation%></a></li>
+        <% end %>
+    </ul>
   <% end %>
-
-<div>
-
+</div>

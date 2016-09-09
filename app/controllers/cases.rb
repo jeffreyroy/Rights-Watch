@@ -29,6 +29,8 @@ post "/cases" do
   end
 end
 
+
+
 # Display case
 get "/cases/:id" do
   @case = Case.find(params[:id])

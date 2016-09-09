@@ -1,10 +1,10 @@
 <div class="white-background" >
   <div class="flex-centered inline-block">
-    <h1>RightsWatch</h1>
+    <a href="/"><h1>RightsWatch</h1></a>
   </div>
   <div class="login-form">
   <% if session[:id] %>
-    <a href="/">Index</a> |
+    Index</a> |
     <%= current_user.user_name %> |
     <form class="login-form" id="logout-form" action="/sessions" method="post">
       <input type="hidden" name="_method" value="DELETE">

@@ -128,14 +128,41 @@ input {
   outline: none;
 }
 
+.tall-button {
+  margin: 1em auto;
+  padding: 1em;
+  width: 3em;
+  max-width: 60%;
+  border-radius: .5em;
+  border: none;
+  outline: none;
+  vertical-align: top;
+}
+
 .small-button {
 	margin: 2px auto;
 	padding: 3px;
 	border-radius: 2px;
 	display: inline;
 }
-.input {
-	padding: 3px;
+
+.box {
+	border: 1px solid black;
+	border-radius: 2px;
+	width: 50%;
+}
+
+input {
+	padding: 2px;
+	margin: 2px;
+}
+
+select {
+	margin: 3px;
+}
+
+optgroup {
+	font-size: 120%;
 }
 
 .light-blue {
@@ -143,7 +170,7 @@ input {
 }
 
 .yellow {
-	background-color: yellow;
+	background-color: tan;
 }
 
 .button-list {
