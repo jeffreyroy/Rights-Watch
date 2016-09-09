@@ -20,6 +20,16 @@ class CourtListener
     get(request_url)
   end
 
+  def get_by_id(endpoint, id)
+    request_url = CL_URL + endpoint + "/" + id
+    get(request_url)
+  end
+
+  def case_data_by_opinion_id(id)
+    opinion_url = CL_URL + "opinions/" + id
+    case_data_by_opinion(opinion_url)
+  end
+
   # Extract id from end of url, i.e.  ../opinions/4030562/
   def id_from_url(url)
     url.split("/")[-1]

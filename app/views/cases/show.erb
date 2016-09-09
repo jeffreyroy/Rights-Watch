@@ -4,9 +4,12 @@
 <div class="flex-centered">
     <p><%= @case.full_citation %></p>
 </div>
-<div class="inline-box">
+<div>
+  <%= @case.full_text %>
+</div>
+<!-- <div>
   <h2>Recent citations</h2>
   <% c = @case.recent_citations %>
-  <%= c.full_citation %>
-
-</div>
+  <h3><%= c.full_citation %></h3>
+  <p><%= c.formatted_text %></p>
+</div> -->
