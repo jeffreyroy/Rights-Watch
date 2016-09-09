@@ -7,6 +7,9 @@ $(document).ready(function() {
 
   hoverListener();
   issueClickListener();
+  issueSubmitListener();
+  caseClickListener();
+  caseSubmitListener();
 });
 
 
@@ -28,10 +31,9 @@ var hoverListener = function() {
 var issueClickListener = function() {
   $( "#new-issue-link").on("click", function(event) {
     event.preventDefault();
-    targetURL=$(this).attr("href");
     $.ajax({
       method: "get",
-      url: targetURL
+      url: "/issues/new"
     })
     .done(function(response){
       $("#issue-form-holder").append(response);
@@ -47,16 +49,60 @@ var issueClickListener = function() {
   $( "issue-form-holder").on("submit", "#issue-form", function(event) {
     event.preventDefault();
     targetURL=$(this).attr("action");
+    method=$(this).attr("method");
+    data=$(this).serialize();
+    $.ajax({
+      method: method,
+      url: targetURL,
+      data: data
+    })
+    .done(function(response){
+      $("#issue-form").remove();
+      $("#issue-button-list").append(response)
+      $("#new-issue-link").show();
+    })
+    .fail(function(response){
+      alert("Can't submit new issue form");
+    })
+    })
+  }
+
+var caseClickListener = function() {
+  $( "#new-case-link").on("submit", function(event) {
+    event.preventDefault();
+    targetURL=$(this).attr("action");
     $.ajax({
       method: "get",
       url: targetURL
     })
     .done(function(response){
-      $("#issue-form-").hide();
-      $("#new-issue-link").show();
+      $("#case-form-holder").append(response);
+      $("#new-case-link").hide();
     })
     .fail(function(response){
-      alert("Can't submit new issue form");
+      alert("Can't load new case form");
+    })
+    })
+  }
+
+  var caseSubmitListener = function() {
+  $( "case-form-holder").on("submit", "#case-form", function(event) {
+    event.preventDefault();
+    targetURL=$(this).attr("action");
+    method=$(this).attr("method");
+    data=$(this).serialize();
+    $.ajax({
+      method: method,
+      url: targetURL,
+      data: data
+    })
+    .done(function(response){
+      $("#case-form").remove();
+      $("#case-button-list").append(response)
+      $("#new-case-link").show();
+    })
+    .fail(function(response){
+      alert("Can't submit new case form");
     })
     })
   }

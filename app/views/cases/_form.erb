@@ -1,0 +1,24 @@
+<form id="case-form" class="box" action='/issues/<%=issue.id%>/cases' method='post'>
+  <div>
+    <div><label>Case Name:</label></div>
+    <input type="text" name="plaintiff" placeholder="Plaintiff">
+    <label>v.</label>
+    <input type="text" name="defendant" placeholder="Defendant">
+  </div>
+  <div>
+    <label>Citation:</label>
+    <input type="number" name="volume" placeholder="Vol." class="num-input">
+    <select name="reporter">
+      <optgroup>
+        <option value=" U.S. ">U.S.</option>
+        <option value=" S. Ct. ">S.Ct.</option>
+      </optgroup>
+    </select>
+    <input type="number" name="page" placeholder="Pg." class="num-input">
+  </div>
+  <div>
+    <label>Date Decided:</label>
+    <input type="date" name="date">
+  </div>
+  <button type="submit">Submit</button>
+</form>
