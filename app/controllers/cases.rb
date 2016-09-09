@@ -13,7 +13,7 @@ get "/issues/:issue_id/cases/new" do
   if request.xhr?
     erb :'cases/_form', layout: false, locals: { issue: issue }
   else
-    erb :'cases/new'
+    redirect '/cases/new'
   end
 end
 
