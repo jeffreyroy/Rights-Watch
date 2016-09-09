@@ -2,19 +2,21 @@
   <h1>Issues</h1>
 </div>
 <div class="flex-centered">
-  <ul class="button-list">
+  <ul class="button-list" id="issue-button-list">
     <% Issue.all.each do |cur_issue| %>
-      <li class="inline-block">
-        <%= erb :'/issues/_follow', layout: false, locals: { user: current_user, issue: cur_issue } %>
-      </li>
+      <%= erb :"/issues/_button", layout: false, locals: { issue: cur_issue } %>
     <% end %>
     <% if current_user %>
-      <li class="inline-block">
+      <li class="inline-block" id="new-issue-link">
         <form class="flex" action="/issues/new">
           <button class="big-button yellow" type="submit">+ Add New Issue</button>
         </form>
       </li>
     <% end %>
   </ul>
+</div>
+
+<div id="issue-form-holder">
+
 </div>
 

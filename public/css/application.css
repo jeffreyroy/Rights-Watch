@@ -149,7 +149,7 @@ input {
 .box {
 	border: 1px solid black;
 	border-radius: 2px;
-	width: 50%;
+  padding: 10px;
 }
 
 input {
@@ -177,3 +177,4 @@ optgroup {
 	text-align: center;
 	list-style-type: none;
 }
+

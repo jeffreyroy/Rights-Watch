@@ -5,7 +5,6 @@ end
 
 #Add new issue
 get "/issues/new" do
-
   if request.xhr?
     erb :'issues/_form', layout: false
   else
@@ -17,7 +16,11 @@ post "/issues" do
   # Get parameters
   @issue = Issue.new(name: params[:name])
   if @issue.save
-    redirect "/issues"
+    if request.xhr?
+      erb :"/issues/_button", layout: false, locals: { issue: @issue }
+    else
+      redirect "/issues"
+    end
   else
     erb :"/issues/new"
   end
