@@ -22,7 +22,7 @@ post "/cases" do
   date = params[:date]
   @case = Case.new(issue_id: issue.id, name: name, cite1: citation, date_decided: date)
   if @case.save
-    redirect "/cases"
+    redirect "/issues/#{issue.id}"
   else
     @issues=Issue.all
     erb :"/cases/new"
