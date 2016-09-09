@@ -1,5 +1,5 @@
 body {
-
+	font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -10,7 +10,6 @@ header {
 .court-background {
 	background: black url("/images/court-background.jpg") no-repeat center center fixed;
 	background-size: 100%, 100%;
-	font-family: serif;
 	color: white;
 }
 
@@ -24,10 +23,6 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-}
-
-.centered {
 
 }
 
@@ -100,6 +95,15 @@ input {
 	display: inline;
 }
 
+.inline-block {
+	display: inline-block;
+
+}
+
+.flex {
+	display: flex;
+}
+
 .inline-box {
 	display: inline-block;
 	vertical-align: top;
@@ -110,6 +114,39 @@ input {
 }
 
 .opinion-container {
+	font-family: serif;
 	padding: 0em 5em;
 }
 
+.big-button {
+  margin: 1em auto;
+  padding: 2em;
+  width: 20em;
+  max-width: 60%;
+  border-radius: .5em;
+  border: none;
+  outline: none;
+}
+
+.small-button {
+	margin: 2px auto;
+	padding: 3px;
+	border-radius: 2px;
+	display: inline;
+}
+.input {
+	padding: 3px;
+}
+
+.light-blue {
+	background-color: lightblue;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.button-list {
+	text-align: center;
+	list-style-type: none;
+}
