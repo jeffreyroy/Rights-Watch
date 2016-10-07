@@ -1,0 +1,7 @@
+<% if cur_case %>
+	<ul>
+	   <% cur_case.recent_citations.each do |citation| %>
+	    <li><a href="/issues/<%=issue.id%>/citations/<%=citation.id%>"><%=citation.full_citation%></a></li>
+	    <% end %>
+	</ul>
+<% end %>

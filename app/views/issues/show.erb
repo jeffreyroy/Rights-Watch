@@ -23,11 +23,7 @@
 </div>
 <div class="inline-box">
   <h2>Recent citations</h2>
-  <% if @case %>
-    <ul>
-       <% @case.recent_citations.each do |citation| %>
-        <li><a href="/issues/<%=@issue.id%>/citations/<%=citation.id%>"><%=citation.full_citation%></a></li>
-        <% end %>
-    </ul>
-  <% end %>
+  <div id="citations-container">
+  <%= erb :'cases/_citing_case', layout: false, locals: { cur_case: @case, issue: @issue } %>
+  </div>
 </div>

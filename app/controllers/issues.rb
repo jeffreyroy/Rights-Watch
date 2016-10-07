@@ -68,5 +68,9 @@ end
 post "/issues/:issue_id/cases/:case_id" do
   @issue = Issue.find(params[:issue_id])
   @case = Case.find(params[:case_id])
-  erb :'issues/show'
+  if request.xhr?
+    erb :"cases/_citing_case", layout: false, locals: { cur_case: @case, issue: @issue }
+  else
+    erb :'issues/show'
+  end
 end

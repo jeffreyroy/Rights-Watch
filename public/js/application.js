@@ -10,6 +10,7 @@ $(document).ready(function() {
   issueSubmitListener();
   caseClickListener();
   caseSubmitListener();
+  citationClickListener();
 });
 
 
@@ -82,10 +83,10 @@ var caseClickListener = function() {
     .fail(function(response){
       alert("Can't load new case form");
     })
-    })
-  }
+  })
+}
 
-  var caseSubmitListener = function() {
+var caseSubmitListener = function() {
   $( "case-form-holder").on("submit", "#case-form", function(event) {
     event.preventDefault();
     targetURL=$(this).attr("action");
@@ -104,5 +105,26 @@ var caseClickListener = function() {
     .fail(function(response){
       alert("Can't submit new case form");
     })
+  })
+}
+
+
+var citationClickListener = function() {
+  $( ".citations").on("submit", function(event) {
+    event.preventDefault();
+    targetURL=$(this).attr("action");
+    $("#citations-container").empty();
+    $("#citations-container").append("<div class='loader'></div>");
+    $.ajax({
+      method: "post",
+      url: targetURL
     })
-  }
+    .done(function(response){
+      $("#citations-container").empty();
+      $("#citations-container").append(response);
+    })
+    .fail(function(response){
+      alert("Can't load new case form");
+    })
+  })
+}
